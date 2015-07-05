@@ -5,7 +5,7 @@ Simple pull to refresh control with support RACCommand.
 
 ### How to use:
 
-Create RACCommand, if you need for this:
+1. Create RACCommand, if you need for this:
 ```
 - (RACCommand *)refreshCommand
 {
@@ -24,10 +24,10 @@ Create RACCommand, if you need for this:
     return _refreshCommand;
 }
 ```
-In your ViewConrtoller init VASRefreshConrtol for your UIScrollView and set RACCommand for execute during refresh: 
+2. In your ViewConrtoller init VASRefreshConrtol for your UIScrollView and set RACCommand for execute during refresh: 
 
 ```
-    self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
+self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
                                                                          forScrollView:self.scrollView];
-    self.refreshControl.rac_command = self.refreshCommand;
+self.refreshControl.rac_command = self.refreshCommand;
 ```
