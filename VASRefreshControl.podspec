@@ -15,21 +15,16 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "[VASRefreshControl"
+  s.name         = "VASRefreshControl"
   s.version      = "0.0.1"
-  s.summary      = "A short description of [VASRefreshControl."
+  s.summary      = "Simple pull to refresh control with RACCommand support."
 
   s.description  = <<-DESC
-                   A longer description of [VASRefreshControl in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   VASRefreshControl - simple refresh control with different styles refresh indicator. You can use RACCommand or completionBlock during refreshing.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/[VASRefreshControl"
-  # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
+  s.homepage     = "https://github.com/spbvasilenko/VASRefreshControl"
+  s.screenshots  = "https://habrastorage.org/files/0ef/bcf/e5c/0efbcfe5ce6041c6aa06901e2c08cff0.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -39,7 +34,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  # s.license      = "MIT (example)"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -54,9 +49,9 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "Igor Vasilenko" => "spb.vasilenko@gmail.com" }
-  # Or just: s.author    = "Igor Vasilenko"
+  Or just: s.author    = "Igor Vasilenko"
   # s.authors            = { "Igor Vasilenko" => "spb.vasilenko@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/Igor Vasilenko"
+  s.social_media_url   = "http://twitter.com/Igor Vasilenko"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,12 +59,12 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios
+  s.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+  s.ios.deployment_target = "5.0"
+  s.osx.deployment_target = "10.7"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/[VASRefreshControl.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/spbvasilenko/VASRefreshControl.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -128,9 +123,9 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "ReactiveCocoa", "~> 2"
 
 end
