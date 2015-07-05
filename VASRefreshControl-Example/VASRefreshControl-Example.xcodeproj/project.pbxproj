@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B71E9F171B49CE6600643C77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E9F161B49CE6600643C77 /* main.m */; };
+		B71E9F1A1B49CE6600643C77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E9F191B49CE6600643C77 /* AppDelegate.m */; };
+		B71E9F1D1B49CE6600643C77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E9F1C1B49CE6600643C77 /* ViewController.m */; };
+		B71E9F201B49CE6600643C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F1E1B49CE6600643C77 /* Main.storyboard */; };
+		B71E9F221B49CE6600643C77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F211B49CE6600643C77 /* Images.xcassets */; };
+		B71E9F251B49CE6600643C77 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F231B49CE6600643C77 /* LaunchScreen.xib */; };
+		B71E9F311B49CE6600643C77 /* VASRefreshControl_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E9F301B49CE6600643C77 /* VASRefreshControl_ExampleTests.m */; };
+		B71E9F451B49CE8A00643C77 /* loader_small_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F3D1B49CE8A00643C77 /* loader_small_blue.png */; };
+		B71E9F461B49CE8A00643C77 /* loader_small_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F3E1B49CE8A00643C77 /* loader_small_blue@2x.png */; };
+		B71E9F471B49CE8A00643C77 /* loader_small_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F3F1B49CE8A00643C77 /* loader_small_blue@3x.png */; };
+		B71E9F481B49CE8A00643C77 /* loader_small_white.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F401B49CE8A00643C77 /* loader_small_white.png */; };
+		B71E9F491B49CE8A00643C77 /* loader_small_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F411B49CE8A00643C77 /* loader_small_white@2x.png */; };
+		B71E9F4A1B49CE8A00643C77 /* loader_small_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71E9F421B49CE8A00643C77 /* loader_small_white@3x.png */; };
+		B71E9F4B1B49CE8A00643C77 /* VASRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B71E9F441B49CE8A00643C77 /* VASRefreshControl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B71E9F2B1B49CE6600643C77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B71E9F091B49CE6600643C77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B71E9F101B49CE6600643C77;
+			remoteInfo = "VASRefreshControl-Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B71E9F111B49CE6600643C77 /* VASRefreshControl-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VASRefreshControl-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71E9F151B49CE6600643C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71E9F161B49CE6600643C77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B71E9F181B49CE6600643C77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B71E9F191B49CE6600643C77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B71E9F1B1B49CE6600643C77 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B71E9F1C1B49CE6600643C77 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B71E9F1F1B49CE6600643C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B71E9F211B49CE6600643C77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B71E9F241B49CE6600643C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B71E9F2A1B49CE6600643C77 /* VASRefreshControl-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VASRefreshControl-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71E9F2F1B49CE6600643C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B71E9F301B49CE6600643C77 /* VASRefreshControl_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VASRefreshControl_ExampleTests.m; sourceTree = "<group>"; };
+		B71E9F3D1B49CE8A00643C77 /* loader_small_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loader_small_blue.png; sourceTree = "<group>"; };
+		B71E9F3E1B49CE8A00643C77 /* loader_small_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader_small_blue@2x.png"; sourceTree = "<group>"; };
+		B71E9F3F1B49CE8A00643C77 /* loader_small_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader_small_blue@3x.png"; sourceTree = "<group>"; };
+		B71E9F401B49CE8A00643C77 /* loader_small_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loader_small_white.png; sourceTree = "<group>"; };
+		B71E9F411B49CE8A00643C77 /* loader_small_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader_small_white@2x.png"; sourceTree = "<group>"; };
+		B71E9F421B49CE8A00643C77 /* loader_small_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loader_small_white@3x.png"; sourceTree = "<group>"; };
+		B71E9F431B49CE8A00643C77 /* VASRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VASRefreshControl.h; sourceTree = "<group>"; };
+		B71E9F441B49CE8A00643C77 /* VASRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VASRefreshControl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B71E9F0E1B49CE6600643C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71E9F271B49CE6600643C77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B71E9F081B49CE6600643C77 = {
+			isa = PBXGroup;
+			children = (
+				B71E9F131B49CE6600643C77 /* VASRefreshControl-Example */,
+				B71E9F2D1B49CE6600643C77 /* VASRefreshControl-ExampleTests */,
+				B71E9F121B49CE6600643C77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B71E9F121B49CE6600643C77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F111B49CE6600643C77 /* VASRefreshControl-Example.app */,
+				B71E9F2A1B49CE6600643C77 /* VASRefreshControl-ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B71E9F131B49CE6600643C77 /* VASRefreshControl-Example */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F3A1B49CE8A00643C77 /* VASRefreshControl */,
+				B71E9F181B49CE6600643C77 /* AppDelegate.h */,
+				B71E9F191B49CE6600643C77 /* AppDelegate.m */,
+				B71E9F1B1B49CE6600643C77 /* ViewController.h */,
+				B71E9F1C1B49CE6600643C77 /* ViewController.m */,
+				B71E9F1E1B49CE6600643C77 /* Main.storyboard */,
+				B71E9F211B49CE6600643C77 /* Images.xcassets */,
+				B71E9F231B49CE6600643C77 /* LaunchScreen.xib */,
+				B71E9F141B49CE6600643C77 /* Supporting Files */,
+			);
+			path = "VASRefreshControl-Example";
+			sourceTree = "<group>";
+		};
+		B71E9F141B49CE6600643C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F151B49CE6600643C77 /* Info.plist */,
+				B71E9F161B49CE6600643C77 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B71E9F2D1B49CE6600643C77 /* VASRefreshControl-ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F301B49CE6600643C77 /* VASRefreshControl_ExampleTests.m */,
+				B71E9F2E1B49CE6600643C77 /* Supporting Files */,
+			);
+			path = "VASRefreshControl-ExampleTests";
+			sourceTree = "<group>";
+		};
+		B71E9F2E1B49CE6600643C77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F2F1B49CE6600643C77 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B71E9F3A1B49CE8A00643C77 /* VASRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F3B1B49CE8A00643C77 /* Resources */,
+				B71E9F431B49CE8A00643C77 /* VASRefreshControl.h */,
+				B71E9F441B49CE8A00643C77 /* VASRefreshControl.m */,
+			);
+			name = VASRefreshControl;
+			path = ../../VASRefreshControl;
+			sourceTree = "<group>";
+		};
+		B71E9F3B1B49CE8A00643C77 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F3C1B49CE8A00643C77 /* refresh control */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B71E9F3C1B49CE8A00643C77 /* refresh control */ = {
+			isa = PBXGroup;
+			children = (
+				B71E9F3D1B49CE8A00643C77 /* loader_small_blue.png */,
+				B71E9F3E1B49CE8A00643C77 /* loader_small_blue@2x.png */,
+				B71E9F3F1B49CE8A00643C77 /* loader_small_blue@3x.png */,
+				B71E9F401B49CE8A00643C77 /* loader_small_white.png */,
+				B71E9F411B49CE8A00643C77 /* loader_small_white@2x.png */,
+				B71E9F421B49CE8A00643C77 /* loader_small_white@3x.png */,
+			);
+			path = "refresh control";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B71E9F101B49CE6600643C77 /* VASRefreshControl-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71E9F341B49CE6600643C77 /* Build configuration list for PBXNativeTarget "VASRefreshControl-Example" */;
+			buildPhases = (
+				B71E9F0D1B49CE6600643C77 /* Sources */,
+				B71E9F0E1B49CE6600643C77 /* Frameworks */,
+				B71E9F0F1B49CE6600643C77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VASRefreshControl-Example";
+			productName = "VASRefreshControl-Example";
+			productReference = B71E9F111B49CE6600643C77 /* VASRefreshControl-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B71E9F291B49CE6600643C77 /* VASRefreshControl-ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71E9F371B49CE6600643C77 /* Build configuration list for PBXNativeTarget "VASRefreshControl-ExampleTests" */;
+			buildPhases = (
+				B71E9F261B49CE6600643C77 /* Sources */,
+				B71E9F271B49CE6600643C77 /* Frameworks */,
+				B71E9F281B49CE6600643C77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B71E9F2C1B49CE6600643C77 /* PBXTargetDependency */,
+			);
+			name = "VASRefreshControl-ExampleTests";
+			productName = "VASRefreshControl-ExampleTests";
+			productReference = B71E9F2A1B49CE6600643C77 /* VASRefreshControl-ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B71E9F091B49CE6600643C77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Igor Vasilenko";
+				TargetAttributes = {
+					B71E9F101B49CE6600643C77 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B71E9F291B49CE6600643C77 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B71E9F101B49CE6600643C77;
+					};
+				};
+			};
+			buildConfigurationList = B71E9F0C1B49CE6600643C77 /* Build configuration list for PBXProject "VASRefreshControl-Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B71E9F081B49CE6600643C77;
+			productRefGroup = B71E9F121B49CE6600643C77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B71E9F101B49CE6600643C77 /* VASRefreshControl-Example */,
+				B71E9F291B49CE6600643C77 /* VASRefreshControl-ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B71E9F0F1B49CE6600643C77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71E9F201B49CE6600643C77 /* Main.storyboard in Resources */,
+				B71E9F251B49CE6600643C77 /* LaunchScreen.xib in Resources */,
+				B71E9F471B49CE8A00643C77 /* loader_small_blue@3x.png in Resources */,
+				B71E9F451B49CE8A00643C77 /* loader_small_blue.png in Resources */,
+				B71E9F481B49CE8A00643C77 /* loader_small_white.png in Resources */,
+				B71E9F491B49CE8A00643C77 /* loader_small_white@2x.png in Resources */,
+				B71E9F461B49CE8A00643C77 /* loader_small_blue@2x.png in Resources */,
+				B71E9F4A1B49CE8A00643C77 /* loader_small_white@3x.png in Resources */,
+				B71E9F221B49CE6600643C77 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71E9F281B49CE6600643C77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B71E9F0D1B49CE6600643C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71E9F4B1B49CE8A00643C77 /* VASRefreshControl.m in Sources */,
+				B71E9F1D1B49CE6600643C77 /* ViewController.m in Sources */,
+				B71E9F1A1B49CE6600643C77 /* AppDelegate.m in Sources */,
+				B71E9F171B49CE6600643C77 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71E9F261B49CE6600643C77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71E9F311B49CE6600643C77 /* VASRefreshControl_ExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B71E9F2C1B49CE6600643C77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B71E9F101B49CE6600643C77 /* VASRefreshControl-Example */;
+			targetProxy = B71E9F2B1B49CE6600643C77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B71E9F1E1B49CE6600643C77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B71E9F1F1B49CE6600643C77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B71E9F231B49CE6600643C77 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B71E9F241B49CE6600643C77 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B71E9F321B49CE6600643C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B71E9F331B49CE6600643C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B71E9F351B49CE6600643C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "VASRefreshControl-Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B71E9F361B49CE6600643C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "VASRefreshControl-Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B71E9F381B49CE6600643C77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VASRefreshControl-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VASRefreshControl-Example.app/VASRefreshControl-Example";
+			};
+			name = Debug;
+		};
+		B71E9F391B49CE6600643C77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VASRefreshControl-ExampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VASRefreshControl-Example.app/VASRefreshControl-Example";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B71E9F0C1B49CE6600643C77 /* Build configuration list for PBXProject "VASRefreshControl-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71E9F321B49CE6600643C77 /* Debug */,
+				B71E9F331B49CE6600643C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B71E9F341B49CE6600643C77 /* Build configuration list for PBXNativeTarget "VASRefreshControl-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71E9F351B49CE6600643C77 /* Debug */,
+				B71E9F361B49CE6600643C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B71E9F371B49CE6600643C77 /* Build configuration list for PBXNativeTarget "VASRefreshControl-ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71E9F381B49CE6600643C77 /* Debug */,
+				B71E9F391B49CE6600643C77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B71E9F091B49CE6600643C77 /* Project object */;
+}

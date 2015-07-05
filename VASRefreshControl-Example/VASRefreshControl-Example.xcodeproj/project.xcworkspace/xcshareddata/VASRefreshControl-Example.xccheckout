@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9B36D8C9-0CEF-4DFA-A4E8-2C752571AD9F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB25E6A897E27CD26711FBBA1065C91C9B0EE6EB</key>
+		<string>https://github.com/spbvasilenko/VASRefreshControl.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VASRefreshControl-Example/VASRefreshControl-Example.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB25E6A897E27CD26711FBBA1065C91C9B0EE6EB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spbvasilenko/VASRefreshControl.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB25E6A897E27CD26711FBBA1065C91C9B0EE6EB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB25E6A897E27CD26711FBBA1065C91C9B0EE6EB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VASRefreshControl</string>
+		</dict>
+	</array>
+</dict>
+</plist>

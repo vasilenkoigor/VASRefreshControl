@@ -56,10 +56,10 @@ static CGFloat const kDefaultDistance = 70.f;
     
     switch (self.loaderStyle)
     {
-        case YTSRefreshControlLoaderStyleBlue:
+        case VASRefreshControlLoaderStyleBlue:
             loaderImage = [UIImage imageNamed:@"loader_small_blue"];
             break;
-        case YTSRefreshControlLoaderStyleWhite:
+        case VASRefreshControlLoaderStyleWhite:
             loaderImage = [UIImage imageNamed:@"loader_small_white"];
             break;
         default:
