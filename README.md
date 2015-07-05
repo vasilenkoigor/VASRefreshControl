@@ -24,7 +24,7 @@ Simple pull to refresh control with support RACCommand.
     return _refreshCommand;
 }
 ```
-2) In your ViewConrtoller init VASRefreshConrtol for your UIScrollView and set RACCommand for execute during refresh: 
+2) Init VASRefreshControl for your UIScrollView and set RACCommand for execute during refresh: 
 
 ```
 self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
