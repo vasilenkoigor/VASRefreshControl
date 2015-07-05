@@ -1,25 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bZW-T2-gUp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--VASRefreshControl-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="586"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49X-MG-tIl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="586"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19q-Pi-F25">
+                                        <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VASRefreshControl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5T-XY-Rk3">
+                                                <rect key="frame" x="8" y="89" width="184" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="f5T-XY-Rk3" firstAttribute="leading" secondItem="19q-Pi-F25" secondAttribute="leading" constant="8" id="2Zf-TQ-a4b"/>
+                                            <constraint firstItem="f5T-XY-Rk3" firstAttribute="top" secondItem="19q-Pi-F25" secondAttribute="top" constant="89" id="E8s-KY-TeY"/>
+                                            <constraint firstAttribute="bottom" secondItem="f5T-XY-Rk3" secondAttribute="bottom" constant="90" id="HKF-bG-5qb"/>
+                                            <constraint firstAttribute="trailing" secondItem="f5T-XY-Rk3" secondAttribute="trailing" constant="8" id="g3d-Do-ObG"/>
+                                            <constraint firstAttribute="height" constant="200" id="jQ5-b7-iLe"/>
+                                            <constraint firstAttribute="width" constant="200" id="yAG-5B-3oh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4lf-NE-noq">
+                                        <rect key="frame" x="60" y="450" width="200" height="118"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VASRefreshControl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mX7-PB-GYy">
+                                                <rect key="frame" x="8" y="89" width="184" height="21"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4lf-NE-noq" firstAttribute="leading" secondItem="19q-Pi-F25" secondAttribute="leading" id="8UU-Lz-CTd"/>
+                                    <constraint firstItem="4lf-NE-noq" firstAttribute="top" secondItem="19q-Pi-F25" secondAttribute="bottom" constant="66" id="Ezq-sK-YgM"/>
+                                    <constraint firstItem="19q-Pi-F25" firstAttribute="top" secondItem="49X-MG-tIl" secondAttribute="top" constant="184" id="J7W-RW-tZ2"/>
+                                    <constraint firstItem="4lf-NE-noq" firstAttribute="trailing" secondItem="19q-Pi-F25" secondAttribute="trailing" id="LZ5-ON-HQS"/>
+                                    <constraint firstAttribute="centerX" secondItem="19q-Pi-F25" secondAttribute="centerX" id="Urb-kx-dkz"/>
+                                    <constraint firstAttribute="bottom" secondItem="19q-Pi-F25" secondAttribute="bottom" constant="184" id="YwK-mX-vgj"/>
+                                    <constraint firstItem="19q-Pi-F25" firstAttribute="leading" secondItem="49X-MG-tIl" secondAttribute="leading" constant="60" id="Z4L-yo-FTM"/>
+                                    <constraint firstAttribute="trailing" secondItem="19q-Pi-F25" secondAttribute="trailing" constant="60" id="btl-Z2-8Hf"/>
+                                    <constraint firstAttribute="bottom" secondItem="4lf-NE-noq" secondAttribute="bottom" id="vLy-2f-1oq"/>
+                                    <constraint firstAttribute="centerX" secondItem="19q-Pi-F25" secondAttribute="centerX" id="yMf-CU-iM0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yMf-CU-iM0"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="49X-MG-tIl" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="IWV-7d-2FD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="49X-MG-tIl" secondAttribute="bottom" id="J0B-jr-Isr"/>
+                            <constraint firstAttribute="trailing" secondItem="49X-MG-tIl" secondAttribute="trailing" id="Jha-H7-jR8"/>
+                            <constraint firstItem="49X-MG-tIl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Nra-us-M7R"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="VASRefreshControl" id="YGO-7R-yys"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="650"/>
+                    <connections>
+                        <outlet property="scrollView" destination="49X-MG-tIl" id="juP-U4-xUj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1146" y="200"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vfo-Tr-Jen">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bZW-T2-gUp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jTw-e9-LDv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="5PT-aJ-1w6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F57-ei-rXY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="200"/>
         </scene>
     </scenes>
 </document>

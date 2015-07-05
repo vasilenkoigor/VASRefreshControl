@@ -7,6 +7,8 @@
 
 #import "VASRefreshControl.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 static CGFloat const kDefaultDistance = 70.f;
 
 @interface VASRefreshControl()
