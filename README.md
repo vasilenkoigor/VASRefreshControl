@@ -3,10 +3,10 @@ Simple pull to refresh control with support RACCommand.
 
 <img src="https://habrastorage.org/files/0ef/bcf/e5c/0efbcfe5ce6041c6aa06901e2c08cff0.gif"/>
 
-# How to use:
+### How to use:
 
 1. Create RACCommand, if you need for this:
-{% highlight objective-c %}
+
 - (RACCommand *)refreshCommand
 {
     if (!_refreshCommand) {
@@ -23,5 +23,3 @@ Simple pull to refresh control with support RACCommand.
     }
     return _refreshCommand;
 }
-
-{% endhighlight %}
