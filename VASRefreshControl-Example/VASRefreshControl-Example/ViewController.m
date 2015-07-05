@@ -36,8 +36,10 @@
         _refreshCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
             return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
                 
-                NSLog(@"Signal execute!");
-                [subscriber sendCompleted];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    NSLog(@"Signal execute!");
+                    [subscriber sendCompleted];
+                });
                 return nil;
             }];
         }];
