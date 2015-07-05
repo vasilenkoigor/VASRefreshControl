@@ -41,8 +41,9 @@ self.refreshControl.rac_command = self.refreshCommand;
 
 Enjoy merge requests!
 
+# License
 
-### The MIT License (MIT)
+The MIT License (MIT)
 
 Copyright (c) 2015, Igor Vasilenko.
 
