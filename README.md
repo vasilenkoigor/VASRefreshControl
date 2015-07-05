@@ -1,5 +1,5 @@
 # VASRefreshControl
-Simple pull to refresh control with support RACCommand. Different styles refresh indicator. Can use completionBlock.
+Simple pull to refresh control with support RACCommand. Different styles refresh indicator.
 
 <img src="https://habrastorage.org/files/0ef/bcf/e5c/0efbcfe5ce6041c6aa06901e2c08cff0.gif"/>
 
@@ -37,3 +37,6 @@ self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshC
                                                                          forScrollView:self.scrollView];
 self.refreshControl.rac_command = self.refreshCommand;
 ```
+### Contribution: 
+
+Enjoy merge requests!
