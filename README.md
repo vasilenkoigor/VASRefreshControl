@@ -6,7 +6,7 @@ Simple pull to refresh control with support RACCommand.
 ### Cocoapods:
 
 ```
-pod 'VASRefreshControl' :git => 'https://github.com/spbvasilenko/VASRefreshControl.git'
+pod 'VASRefreshControl', :git => 'https://github.com/spbvasilenko/VASRefreshControl.git'
 ```
 
 ### How to use:
