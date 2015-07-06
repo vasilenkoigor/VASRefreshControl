@@ -64,15 +64,15 @@ static CGFloat const kDefaultDistance = 70.f;
         case VASRefreshControlLoaderStyleWhite:
             loaderImage = [UIImage imageNamed:@"loader_small_white"];
             break;
-        default:
-            loaderImage = [UIImage imageNamed:@"loader_small_blue"];
-            break;
     }
     
-    self.loaderImageView = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-loaderImage.size.width)/2, (kDefaultDistance-loaderImage.size.height)/2, loaderImage.size.width, loaderImage.size.height)];
-    self.loaderImageView.image = loaderImage;
-    
+    self.loaderImageView = [[UIImageView alloc] initWithImage:loaderImage];
+    [self.loaderImageView setFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - loaderImage.size.width)/2,
+                                              (kDefaultDistance - loaderImage.size.height)/2,
+                                              loaderImage.size.width,
+                                              loaderImage.size.height)];
     [self addSubview:self.loaderImageView];
+    
     [self.scrollView addSubview:self];
 }
 
@@ -116,9 +116,7 @@ static CGFloat const kDefaultDistance = 70.f;
                              self.callbackBlock();
                          }
                          if (self.rac_command) {
-                             [[self.rac_command execute:nil] subscribeNext:^(id x) {
-                                 [self.successSubject sendNext:@(YES)];
-                             } completed:^{
+                             [[self.rac_command execute:nil] subscribeCompleted:^{
                                  [self.successSubject sendNext:@(YES)];
                              }];
                          }
@@ -175,8 +173,10 @@ static CGFloat const kDefaultDistance = 70.f;
             {
                 self.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.contentOffset.y);
                 
-                CGFloat scale = MIN((-self.scrollView.contentOffset.y + (100 - kDefaultDistance))/100, 1);
-                self.loaderImageView.transform = CGAffineTransformMakeScale(scale, scale);
+                CGFloat pullProgress = MIN((-self.scrollView.contentOffset.y + (100 - kDefaultDistance))/100, 1);
+                self.loaderImageView.alpha = pullProgress;
+                self.loaderImageView.layer.transform = CATransform3DMakeRotation(DegreesToRadians(180 + (180 * pullProgress)), 0.0, 0.0, 1.f);
+
                 
                 if(!self.scrollView.dragging && self.scrollView.decelerating && self.scrollView.contentOffset.y <= (-kDefaultDistance + 10))
                 {
@@ -192,14 +192,25 @@ static CGFloat const kDefaultDistance = 70.f;
     CABasicAnimation *rotationLoaderImageView = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationLoaderImageView.toValue = @(M_PI * 2.f);
     rotationLoaderImageView.duration = 1.f;
+    rotationLoaderImageView.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     rotationLoaderImageView.cumulative = YES;
     rotationLoaderImageView.repeatCount = HUGE_VAL;
+    rotationLoaderImageView.fillMode = kCAFillModeForwards;
+    rotationLoaderImageView.autoreverses = NO;
+    
     [self.loaderImageView.layer addAnimation:rotationLoaderImageView forKey:@"rotation"];
 }
 
 - (void)endAnimating
 {
-    [self.loaderImageView.layer removeAllAnimations];
+    [self.loaderImageView.layer removeAnimationForKey:@"rotation"];
 }
+
+#pragma mark - Helpers
+
+CGFloat DegreesToRadians(CGFloat degrees)
+{
+    return degrees * M_PI / 180;
+};
 
 @end
