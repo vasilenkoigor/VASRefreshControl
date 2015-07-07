@@ -1,7 +1,7 @@
 # VASRefreshControl
 Simple pull to refresh control with support RACCommand. Different styles refresh indicator.
 
-<img src="https://habrastorage.org/files/0ef/bcf/e5c/0efbcfe5ce6041c6aa06901e2c08cff0.gif"/>
+<img src="https://habrastorage.org/files/d7f/7b0/9ec/d7f7b09ec21b439dacdada7dc506e54d.gif"/>
 
 ### Cocoapods:
 
@@ -34,7 +34,7 @@ pod 'VASRefreshControl', :git => 'https://github.com/spbvasilenko/VASRefreshCont
 
 ```
 self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
-                                                                         forScrollView:self.scrollView];
+                                                       forScrollView:self.scrollView];
 self.refreshControl.rac_command = self.refreshCommand;
 ```
 ### Contribution: 
