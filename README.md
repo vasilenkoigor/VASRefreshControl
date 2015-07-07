@@ -34,7 +34,7 @@ pod 'VASRefreshControl', :git => 'https://github.com/spbvasilenko/VASRefreshCont
 
 ```
 self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
-                                                                         forScrollView:self.scrollView];
+                                                       forScrollView:self.scrollView];
 self.refreshControl.rac_command = self.refreshCommand;
 ```
 ### Contribution: 
