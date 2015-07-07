@@ -10,12 +10,16 @@
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
 static CGFloat const kDefaultDistance = 70.f;
+static NSString *const kRotateLoaderImageViewAnimationKey = @"rotation";
+static NSString *const kCAAnimationTransformRotation = @"transform.rotation.z";
 
 @interface VASRefreshControl()
 
 @property (nonatomic, readwrite, getter=isRefreshing) BOOL refreshing;
+
 @property (nonatomic, assign) VASRefreshControlLoaderStyle loaderStyle;
 @property (nonatomic, readwrite) VASRefreshControlState state;
+
 @property (nonatomic, strong) VASRefreshControlCallbackBlock callbackBlock;
 
 @property (nonatomic, strong) UIImageView *loaderImageView;
@@ -24,6 +28,8 @@ static CGFloat const kDefaultDistance = 70.f;
 
 @property (nonatomic, strong) RACSubject *successSubject;
 @property (nonatomic, strong) RACSignal *successSignal;
+@property (nonatomic, readwrite) RACSignal *controlStateSignal;
+@property (nonatomic, strong) RACSubject *controlStateSubject;
 
 @end
 
@@ -48,7 +54,9 @@ static CGFloat const kDefaultDistance = 70.f;
         _loaderStyle = loaderStyle;
         _scrollView = scrollView;
         _contentInset = scrollView.contentInset;
+        
         _state = VASRefreshControlStateNormal;
+        [self.controlStateSubject sendNext:@(VASRefreshControlStateNormal)];
         
         [self setupLoaderView];
         [self setupActionsBind];
@@ -95,7 +103,6 @@ static CGFloat const kDefaultDistance = 70.f;
         
         if (success.boolValue) {
             [self endRefreshing];
-            self.state = VASRefreshControlStateNormal;
         }
     }];
 }
@@ -122,6 +129,7 @@ static CGFloat const kDefaultDistance = 70.f;
                          
                          self.refreshing = YES;
                          self.state = VASRefreshControlStateRefreshing;
+                         [self.controlStateSubject sendNext:@(VASRefreshControlStateRefreshing)];
                          
                          if (self.callbackBlock) {
                              self.callbackBlock();
@@ -151,6 +159,9 @@ static CGFloat const kDefaultDistance = 70.f;
                      } completion:^(BOOL finished) {
                          
                          self.refreshing = NO;
+                         self.state = VASRefreshControlStateNormal;
+                         [self.controlStateSubject sendNext:@(VASRefreshControlStateNormal)];
+                         
                          self.frame = CGRectZero;
                      }];
 }
@@ -163,6 +174,14 @@ static CGFloat const kDefaultDistance = 70.f;
         self.successSubject = [RACSubject new];
     }
     return self.successSubject;
+}
+
+- (RACSignal *)controlStateSignal
+{
+    if (_controlStateSubject) {
+        _controlStateSubject = [RACSubject new];
+    }
+    return _controlStateSubject;
 }
 
 - (void)setCallbackBlock:(VASRefreshControlCallbackBlock)callbackBlock
@@ -183,6 +202,7 @@ static CGFloat const kDefaultDistance = 70.f;
             if (self.scrollView.contentOffset.y < 0)
             {
                 self.state = VASRefreshControlStatePulling;
+                [self.controlStateSubject sendNext:@(VASRefreshControlStatePulling)];
                 
                 self.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.contentOffset.y);
                 
@@ -202,7 +222,7 @@ static CGFloat const kDefaultDistance = 70.f;
 
 - (void)startAnimating
 {
-    CABasicAnimation *rotationLoaderImageView = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    CABasicAnimation *rotationLoaderImageView = [CABasicAnimation animationWithKeyPath:kCAAnimationTransformRotation];
     rotationLoaderImageView.toValue = @(M_PI * 2.f);
     rotationLoaderImageView.duration = 1.f;
     rotationLoaderImageView.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
@@ -211,12 +231,12 @@ static CGFloat const kDefaultDistance = 70.f;
     rotationLoaderImageView.fillMode = kCAFillModeForwards;
     rotationLoaderImageView.autoreverses = NO;
     
-    [self.loaderImageView.layer addAnimation:rotationLoaderImageView forKey:@"rotation"];
+    [self.loaderImageView.layer addAnimation:rotationLoaderImageView forKey:kRotateLoaderImageViewAnimationKey];
 }
 
 - (void)endAnimating
 {
-    [self.loaderImageView.layer removeAnimationForKey:@"rotation"];
+    [self.loaderImageView.layer removeAnimationForKey:kRotateLoaderImageViewAnimationKey];
 }
 
 #pragma mark - Helpers

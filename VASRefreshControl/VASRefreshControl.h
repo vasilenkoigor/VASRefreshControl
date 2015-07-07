@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @class RACCommand;
+@class RACSignal;
 
 typedef NS_ENUM(NSUInteger, VASRefreshControlLoaderStyle) {
     VASRefreshControlLoaderStyleBlue = 1, // default
@@ -26,6 +27,7 @@ typedef void(^VASRefreshControlCallbackBlock)();
 
 @property (nonatomic, readonly, getter=isRefreshing) BOOL refreshing;
 @property (nonatomic, readonly) VASRefreshControlState state;
+@property (nonatomic, readonly) RACSignal *controlStateSignal;
 
 @property (nonatomic, strong) RACCommand *rac_command;
 
