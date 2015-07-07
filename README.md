@@ -41,6 +41,12 @@ self.refreshControl.rac_command = self.refreshCommand;
 
 Enjoy merge requests!
 
+### TO DO:
+
+1) More customize
+2) Implement load more refresh
+3) Improve animation refresh activity
+
 # License
 
 The MIT License (MIT)
