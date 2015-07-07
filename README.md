@@ -37,9 +37,6 @@ self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshC
                                                        forScrollView:self.scrollView];
 self.refreshControl.rac_command = self.refreshCommand;
 ```
-### Contribution: 
-
-Enjoy merge requests!
 
 ### TO DO:
 
@@ -48,6 +45,10 @@ Enjoy merge requests!
 2) Implement load more refresh
 
 3) Improve animation refresh activity
+
+### Contribution: 
+
+Enjoy merge requests!
 
 # License
 
