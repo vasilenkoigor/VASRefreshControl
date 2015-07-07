@@ -15,6 +15,7 @@ static CGFloat const kDefaultDistance = 70.f;
 
 @property (nonatomic, readwrite, getter=isRefreshing) BOOL refreshing;
 @property (nonatomic, assign) VASRefreshControlLoaderStyle loaderStyle;
+@property (nonatomic, readwrite) VASRefreshControlState state;
 @property (nonatomic, strong) VASRefreshControlCallbackBlock callbackBlock;
 
 @property (nonatomic, strong) UIImageView *loaderImageView;
@@ -30,6 +31,13 @@ static CGFloat const kDefaultDistance = 70.f;
 
 #pragma mark - Init
 
++ (instancetype)refreshControlWithLoaderStyle:(VASRefreshControlLoaderStyle)loaderStyle
+                                forScrollView:(UIScrollView *)scrollView
+{
+    return [[self alloc] initWithLoaderStyle:loaderStyle
+                               forScrollView:scrollView];
+}
+
 - (instancetype)initWithLoaderStyle:(VASRefreshControlLoaderStyle)loaderStyle
                       forScrollView:(UIScrollView *)scrollView
 {
@@ -40,6 +48,7 @@ static CGFloat const kDefaultDistance = 70.f;
         _loaderStyle = loaderStyle;
         _scrollView = scrollView;
         _contentInset = scrollView.contentInset;
+        _state = VASRefreshControlStateNormal;
         
         [self setupLoaderView];
         [self setupActionsBind];
@@ -86,6 +95,7 @@ static CGFloat const kDefaultDistance = 70.f;
         
         if (success.boolValue) {
             [self endRefreshing];
+            self.state = VASRefreshControlStateNormal;
         }
     }];
 }
@@ -111,6 +121,7 @@ static CGFloat const kDefaultDistance = 70.f;
                      } completion:^(BOOL finished) {
                          
                          self.refreshing = YES;
+                         self.state = VASRefreshControlStateRefreshing;
                          
                          if (self.callbackBlock) {
                              self.callbackBlock();
@@ -171,6 +182,8 @@ static CGFloat const kDefaultDistance = 70.f;
         {
             if (self.scrollView.contentOffset.y < 0)
             {
+                self.state = VASRefreshControlStatePulling;
+                
                 self.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.contentOffset.y);
                 
                 CGFloat pullProgress = MIN((-self.scrollView.contentOffset.y + (100 - kDefaultDistance))/100, 1);

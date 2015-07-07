@@ -25,8 +25,8 @@
 {
     [super viewDidLoad];
     
-    self.refreshControl = [[VASRefreshControl alloc] initWithLoaderStyle:VASRefreshControlLoaderStyleBlue
-                                                                         forScrollView:self.scrollView];
+    self.refreshControl = [VASRefreshControl refreshControlWithLoaderStyle:VASRefreshControlLoaderStyleBlue
+                                                             forScrollView:self.scrollView];
     self.refreshControl.rac_command = self.refreshCommand;
 }
 

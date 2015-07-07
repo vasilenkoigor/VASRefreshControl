@@ -10,8 +10,14 @@
 @class RACCommand;
 
 typedef NS_ENUM(NSUInteger, VASRefreshControlLoaderStyle) {
-    VASRefreshControlLoaderStyleBlue, // default
-    VASRefreshControlLoaderStyleWhite
+    VASRefreshControlLoaderStyleBlue = 1, // default
+    VASRefreshControlLoaderStyleWhite = 2
+};
+
+typedef NS_ENUM(NSUInteger, VASRefreshControlState) {
+    VASRefreshControlStateNormal = 1,
+    VASRefreshControlStatePulling = 2,
+    VASRefreshControlStateRefreshing = 3
 };
 
 typedef void(^VASRefreshControlCallbackBlock)();
@@ -19,6 +25,7 @@ typedef void(^VASRefreshControlCallbackBlock)();
 @interface VASRefreshControl : UIView
 
 @property (nonatomic, readonly, getter=isRefreshing) BOOL refreshing;
+@property (nonatomic, readonly) VASRefreshControlState state;
 
 @property (nonatomic, strong) RACCommand *rac_command;
 
@@ -29,6 +36,9 @@ typedef void(^VASRefreshControlCallbackBlock)();
 */
 - (instancetype)initWithLoaderStyle:(VASRefreshControlLoaderStyle)loaderStyle
                       forScrollView:(UIScrollView *)scrollView;
+
++ (instancetype)refreshControlWithLoaderStyle:(VASRefreshControlLoaderStyle)loaderStyle
+                                forScrollView:(UIScrollView *)scrollView;
 
 - (void)setCallbackBlock:(VASRefreshControlCallbackBlock)callbackBlock;
 - (void)startRefreshing;
