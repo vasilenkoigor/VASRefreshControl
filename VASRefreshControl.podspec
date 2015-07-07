@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VASRefreshControl"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "Simple pull to refresh control with RACCommand support."
   s.homepage     = "https://github.com/spbvasilenko/VASRefreshControl"
   
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author             = { "Igor Vasilenko" => "spb.vasilenko@gmail.com" }
   
   s.platform     = :ios, "6.0"
-  s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "6.0"
   s.osx.deployment_target = "10.7"
   
   s.source_files  = "VASRefreshControl/**/*.{h,m}"
