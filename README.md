@@ -44,7 +44,9 @@ Enjoy merge requests!
 ### TO DO:
 
 1) More customize
+
 2) Implement load more refresh
+
 3) Improve animation refresh activity
 
 # License
